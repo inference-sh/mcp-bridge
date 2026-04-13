@@ -1,0 +1,67 @@
+{
+  "name": "@inferencesh/mcp-bridge",
+  "version": "0.1.0",
+  "description": "Stdio-to-HTTP bridge for MCP (Model Context Protocol). Connects any stdio MCP client to inference.sh or any remote MCP server via Streamable HTTP transport with Bearer token auth.",
+  "type": "module",
+  "bin": {
+    "inferencesh-mcp": "dist/index.js",
+    "mcp-bridge": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stdio",
+    "http",
+    "bridge",
+    "proxy",
+    "streamable-http",
+    "sse",
+    "inference",
+    "ai",
+    "claude",
+    "cursor",
+    "zed",
+    "mcp-server",
+    "mcp-client",
+    "mcp-transport",
+    "mcp-bridge",
+    "mcp-proxy",
+    "mcp-stdio",
+    "mcp-http",
+    "bearer-token",
+    "api-key"
+  ],
+  "author": "Okaris <hello@inference.sh>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inference-sh/mcp-bridge.git"
+  },
+  "homepage": "https://github.com/inference-sh/mcp-bridge",
+  "bugs": {
+    "url": "https://github.com/inference-sh/mcp-bridge/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
